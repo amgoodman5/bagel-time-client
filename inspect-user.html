@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Inspect User</title>
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Welcome to the Inspect user Page!</h1>
+        <section class="form-container">
+            <!-- Form will populate here -->
+        </section>
+
+        <div class="btn-group btn-group-justified" role="group" aria-label="control buttons">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" id="back-to-summary">Back to User Summary</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" id="delete-user">Delete User</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" id="save-user-changes">Save User Changes</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script id="inspect-user-form" type="text/x-handlebars-template">
+
+      <form class="edit-form">
+          <div class="form-group row">
+              <div class="col-sm-1">
+                  <label>ID</label>
+                  <input type="number" class="form-control" id="id" value="{{id}}" disabled/>
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm-6">
+                  <label for="email">E-Mail</label>
+                  <input type="text" class="form-control" id="email" value="{{email}}"/>
+              </div>
+
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm-3">
+                  <label for="date">Date Created</label>
+                  <input type="text" class="form-control" id="date" value="{{date}}"/>
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm-3">
+                  <label for="is_active">Is Active?</label>
+                  <input type="text" class="form-control" id="is_active" value="{{is_active}}"/>
+              </div>
+          </div>
+      </form>
+
+
+    </script>
+    <script src="https:////cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+     <script src="scripts/user.js"></script>
+</body>
+
+</html>
